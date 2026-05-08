@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Misfits — Launching Soon</title>
+  <meta name="description" content="Misfits er på vei. En moderne coming soon-side for klesmerket med mørk editorial vibe og e-postregistrering." />
+  <meta property="og:title" content="Misfits — Launching Soon" />
+  <meta property="og:description" content="Et nytt klesunivers er på vei. Meld deg på for tidlig tilgang." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=cabinet-grotesk@500,700,800&display=swap" rel="stylesheet" />
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --text-3xl: clamp(2.5rem, 1rem + 4vw, 5rem);
+      --text-hero: clamp(3.5rem, 1.2rem + 7vw, 8rem);
+
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+      --space-24: 6rem;
+      --space-32: 8rem;
+
+      --color-bg: #f5f2ec;
+      --color-surface: #faf7f2;
+      --color-surface-2: #ffffff;
+      --color-surface-offset: #ede8df;
+      --color-border: rgba(29, 26, 22, 0.12);
+      --color-divider: rgba(29, 26, 22, 0.08);
+      --color-text: #171411;
+      --color-text-muted: #6f6a63;
+      --color-text-faint: #9a948c;
+      --color-text-inverse: #f7f4ee;
+      --color-primary: #8cff6a;
+      --color-primary-hover: #74ea51;
+      --color-primary-active: #5cc83d;
+      --color-primary-highlight: rgba(140,255,106,0.18);
+      --radius-sm: 0.375rem;
+      --radius-md: 0.75rem;
+      --radius-lg: 1rem;
+      --radius-xl: 1.5rem;
+      --radius-full: 9999px;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.08);
+      --shadow-md: 0 10px 30px rgba(0,0,0,0.12);
+      --shadow-lg: 0 24px 80px rgba(0,0,0,0.16);
+      --content-default: 1120px;
+      --font-display: 'Cabinet Grotesk', 'Arial Narrow', sans-serif;
+      --font-body: 'General Sans', 'Inter', sans-serif;
+      --grid-line: rgba(29, 26, 22, 0.06);
+      --hero-glow: radial-gradient(circle at 20% 10%, rgba(140,255,106,0.14), transparent 34%), radial-gradient(circle at 80% 0%, rgba(255,255,255,0.5), transparent 26%);
+    }
+
+    [data-theme="dark"] {
+      --color-bg: #090909;
+      --color-surface: #111111;
+      --color-surface-2: #181818;
+      --color-surface-offset: #0e0e0e;
+      --color-border: rgba(255, 255, 255, 0.1);
+      --color-divider: rgba(255, 255, 255, 0.07);
+      --color-text: #f4f1eb;
+      --color-text-muted: #a39b92;
+      --color-text-faint: #6d675f;
+      --color-text-inverse: #0a0a0a;
+      --color-primary: #a7ff84;
+      --color-primary-hover: #b8ff9a;
+      --color-primary-active: #91ee69;
+      --color-primary-highlight: rgba(167,255,132,0.14);
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.25);
+      --shadow-md: 0 16px 40px rgba(0,0,0,0.35);
+      --shadow-lg: 0 24px 80px rgba(0,0,0,0.55);
+      --grid-line: rgba(255,255,255,0.06);
+      --hero-glow: radial-gradient(circle at 20% 10%, rgba(167,255,132,0.16), transparent 30%), radial-gradient(circle at 84% 12%, rgba(255,255,255,0.06), transparent 22%);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        --color-bg: #090909;
+        --color-surface: #111111;
+        --color-surface-2: #181818;
+        --color-surface-offset: #0e0e0e;
+        --color-border: rgba(255, 255, 255, 0.1);
+        --color-divider: rgba(255, 255, 255, 0.07);
+        --color-text: #f4f1eb;
+        --color-text-muted: #a39b92;
+        --color-text-faint: #6d675f;
+        --color-text-inverse: #0a0a0a;
+        --color-primary: #a7ff84;
+        --color-primary-hover: #b8ff9a;
+        --color-primary-active: #91ee69;
+        --color-primary-highlight: rgba(167,255,132,0.14);
+        --grid-line: rgba(255,255,255,0.06);
+        --hero-glow: radial-gradient(circle at 20% 10%, rgba(167,255,132,0.16), transparent 30%), radial-gradient(circle at 84% 12%, rgba(255,255,255,0.06), transparent 22%);
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+    body {
+      min-height: 100dvh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.6;
+      color: var(--color-text);
+      background:
+        linear-gradient(180deg, transparent, rgba(0,0,0,0.04)),
+        var(--hero-glow),
+        var(--color-bg);
+      overflow-x: hidden;
+    }
+    img, svg { display: block; max-width: 100%; }
+    button, input { font: inherit; }
+    a, button, input {
+      transition: color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+                  background 180ms cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 180ms cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    :focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 4px;
+      border-radius: var(--radius-sm);
+    }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+    .page-shell {
+      position: relative;
+      isolation: isolate;
+    }
+    .page-shell::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .container {
+      width: min(calc(100% - 2rem), var(--content-default));
+      margin-inline: auto;
+    }
+    .skip-link {
+      position: absolute;
+      left: var(--space-4);
+      top: -100%;
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      padding: var(--space-3) var(--space-4);
+      border-radius: var(--radius-full);
+      z-index: 100;
+      text-decoration: none;
+      font-size: var(--text-sm);
+    }
+    .skip-link:focus { top: var(--space-4); }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(16px);
+      background: color-mix(in srgb, var(--color-bg) 72%, transparent);
+      border-bottom: 1px solid var(--color-divider);
+    }
+    .topbar {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-3);
+      text-decoration: none;
+      color: inherit;
+    }
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, var(--color-surface-2), var(--color-surface));
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+    .brand-name {
+      font-size: var(--text-sm);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-text);
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    .theme-toggle,
+    .mini-pill {
+      min-width: 44px;
+      min-height: 44px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--color-border);
+      background: color-mix(in srgb, var(--color-surface) 72%, transparent);
+      color: var(--color-text);
+    }
+    .mini-pill {
+      padding: 0 var(--space-4);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--text-sm);
+      white-space: nowrap;
+    }
+    .mini-pill:hover,
+    .theme-toggle:hover { transform: translateY(-1px); }
+
+    main {
+      padding-block: clamp(var(--space-8), 4vw, var(--space-16));
+    }
+    .hero {
+      min-height: calc(100dvh - 88px);
+      display: grid;
+      align-items: center;
+      padding-block: clamp(var(--space-12), 8vw, var(--space-24));
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+      gap: clamp(var(--space-8), 4vw, var(--space-16));
+      align-items: end;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: 0.5rem 0.9rem;
+      border-radius: var(--radius-full);
+      background: var(--color-primary-highlight);
+      border: 1px solid color-mix(in srgb, var(--color-primary) 28%, var(--color-border));
+      color: var(--color-text);
+      font-size: var(--text-xs);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-5);
+    }
+    .eyebrow-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: var(--color-primary);
+      box-shadow: 0 0 0 6px color-mix(in srgb, var(--color-primary) 20%, transparent);
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: var(--text-hero);
+      line-height: 0.92;
+      letter-spacing: -0.05em;
+      max-width: 10ch;
+      text-transform: uppercase;
+    }
+    .hero-copy p {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      max-width: 34ch;
+      margin-top: var(--space-5);
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-top: var(--space-6);
+    }
+    .meta-chip {
+      padding: 0.8rem 1rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--color-border);
+      background: color-mix(in srgb, var(--color-surface) 82%, transparent);
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+    .hero-card {
+      position: relative;
+      padding: clamp(var(--space-6), 3.5vw, var(--space-8));
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, color-mix(in srgb, var(--color-surface-2) 72%, transparent), color-mix(in srgb, var(--color-surface) 90%, transparent));
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -10% -20% auto;
+      width: 240px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: radial-gradient(circle, color-mix(in srgb, var(--color-primary) 30%, transparent), transparent 68%);
+      filter: blur(4px);
+    }
+    .stack {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      margin-bottom: var(--space-6);
+    }
+    .launch-date {
+      display: grid;
+      gap: var(--space-2);
+    }
+    .label {
+      color: var(--color-text-faint);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+    .launch-date strong {
+      font-size: var(--text-xl);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-3);
+      margin-block: var(--space-6);
+    }
+    .stat {
+      padding: var(--space-4);
+      border-radius: var(--radius-lg);
+      background: color-mix(in srgb, var(--color-surface) 90%, transparent);
+      border: 1px solid var(--color-divider);
+    }
+    .stat strong {
+      display: block;
+      font-size: var(--text-lg);
+      line-height: 1.1;
+      margin-bottom: var(--space-1);
+    }
+    .stat span {
+      color: var(--color-text-muted);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .newsletter {
+      display: grid;
+      gap: var(--space-3);
+      margin-top: var(--space-5);
+    }
+    .input-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: var(--space-3);
+    }
+    .input-row input {
+      min-height: 54px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--color-border);
+      padding: 0 var(--space-5);
+      background: color-mix(in srgb, var(--color-bg) 55%, var(--color-surface-2));
+      color: var(--color-text);
+    }
+    .input-row input::placeholder { color: var(--color-text-faint); }
+    .cta {
+      min-height: 54px;
+      padding: 0 var(--space-5);
+      border-radius: var(--radius-full);
+      border: 1px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      box-shadow: 0 12px 30px color-mix(in srgb, var(--color-primary) 22%, transparent);
+    }
+    .cta:hover {
+      background: var(--color-primary-hover);
+      transform: translateY(-1px);
+    }
+    .fineprint {
+      color: var(--color-text-faint);
+      font-size: var(--text-xs);
+      max-width: 40ch;
+    }
+    .success-note {
+      display: none;
+      padding: var(--space-3) var(--space-4);
+      border-radius: var(--radius-md);
+      background: var(--color-primary-highlight);
+      border: 1px solid color-mix(in srgb, var(--color-primary) 24%, var(--color-border));
+      color: var(--color-text);
+      font-size: var(--text-sm);
+    }
+    .success-note.is-visible { display: block; }
+
+    .info-strip {
+      border-top: 1px solid var(--color-divider);
+      border-bottom: 1px solid var(--color-divider);
+      padding-block: var(--space-5);
+      overflow: hidden;
+    }
+    .marquee {
+      display: flex;
+      gap: var(--space-8);
+      white-space: nowrap;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: var(--text-xs);
+      animation: drift 22s linear infinite;
+      width: max-content;
+    }
+    @keyframes drift {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .section {
+      padding-block: clamp(var(--space-12), 8vw, var(--space-24));
+    }
+    .section-grid {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: clamp(var(--space-6), 4vw, var(--space-12));
+      align-items: start;
+    }
+    .section-kicker {
+      color: var(--color-text-faint);
+      font-size: var(--text-xs);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-3);
+    }
+    .section h2 {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      max-width: 11ch;
+    }
+    .section-intro {
+      color: var(--color-text-muted);
+      max-width: 48ch;
+      margin-top: var(--space-4);
+    }
+    .feature-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: var(--space-4);
+      margin-top: var(--space-2);
+    }
+    .feature-card,
+    .quote-card,
+    .details-card {
+      position: relative;
+      border-radius: 28px;
+      background: color-mix(in srgb, var(--color-surface) 84%, transparent);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+    .feature-card {
+      padding: clamp(var(--space-6), 3vw, var(--space-8));
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background:
+        linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.2) 100%),
+        radial-gradient(circle at top right, color-mix(in srgb, var(--color-primary) 26%, transparent), transparent 28%),
+        linear-gradient(145deg, color-mix(in srgb, var(--color-surface-2) 92%, transparent), color-mix(in srgb, var(--color-surface-offset) 88%, transparent));
+    }
+    .feature-card::after {
+      content: "MISFITS";
+      position: absolute;
+      top: var(--space-5);
+      right: var(--space-5);
+      font-size: clamp(3rem, 5vw, 5rem);
+      line-height: 0.9;
+      font-weight: 800;
+      letter-spacing: -0.08em;
+      color: color-mix(in srgb, var(--color-text) 8%, transparent);
+      pointer-events: none;
+    }
+    .feature-card .tag {
+      display: inline-flex;
+      width: fit-content;
+      padding: 0.55rem 0.85rem;
+      border-radius: var(--radius-full);
+      background: rgba(0,0,0,0.28);
+      color: #f7f4ee;
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: var(--text-xs);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px);
+      margin-bottom: auto;
+    }
+    .feature-card h3,
+    .details-card h3,
+    .quote-card h3 {
+      font-size: var(--text-xl);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+    }
+    .feature-card p,
+    .details-card p,
+    .quote-card p { color: var(--color-text-muted); margin-top: var(--space-3); }
+    .side-stack {
+      display: grid;
+      gap: var(--space-4);
+    }
+    .quote-card,
+    .details-card { padding: clamp(var(--space-5), 2.5vw, var(--space-6)); }
+    .quote-card blockquote {
+      font-size: var(--text-lg);
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      max-width: 22ch;
+    }
+    .quote-card footer {
+      margin-top: var(--space-5);
+      color: var(--color-text-faint);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--space-4);
+      margin-top: var(--space-6);
+    }
+    .countdown-tile {
+      padding: var(--space-5);
+      border-radius: var(--radius-xl);
+      background: color-mix(in srgb, var(--color-surface) 85%, transparent);
+      border: 1px solid var(--color-border);
+      text-align: center;
+    }
+    .countdown-tile strong {
+      display: block;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-family: var(--font-display);
+      letter-spacing: -0.06em;
+      line-height: 0.95;
+    }
+    .countdown-tile span {
+      color: var(--color-text-faint);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    footer {
+      padding-bottom: var(--space-10);
+    }
+    .footer-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      padding: var(--space-5);
+      border: 1px solid var(--color-divider);
+      border-radius: 24px;
+      background: color-mix(in srgb, var(--color-surface) 75%, transparent);
+    }
+    .footer-card p {
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+    }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 700ms cubic-bezier(0.16,1,0.3,1), transform 700ms cubic-bezier(0.16,1,0.3,1);
+    }
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .section-grid,
+      .feature-layout {
+        grid-template-columns: 1fr;
+      }
+      h1 { max-width: 8ch; }
+      .hero-card { max-width: 680px; }
+    }
+
+    @media (max-width: 720px) {
+      .topbar { min-height: 68px; }
+      .brand-name { letter-spacing: 0.16em; }
+      .mini-pill { display: none; }
+      .input-row { grid-template-columns: 1fr; }
+      .stat-grid,
+      .countdown { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .footer-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .container { width: min(calc(100% - 1.25rem), var(--content-default)); }
+      h1 { font-size: clamp(3rem, 16vw, 4.75rem); }
+      .hero-copy p { font-size: var(--text-base); }
+      .stat-grid,
+      .countdown { grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+      .countdown-tile,
+      .stat { padding: var(--space-4); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      [data-reveal] { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Hopp til innhold</a>
+  <div class="page-shell">
+    <header>
+      <div class="container topbar">
+        <a class="brand" href="#top" aria-label="Misfits hjem">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Misfits logo">
+              <path d="M10 44L24 18L32 32L40 18L54 44" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 44H46" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand-name">Misfits</span>
+        </a>
+        <div class="header-actions">
+          <a class="mini-pill" href="#notify">Tidlig tilgang</a>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Bytt tema">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero container" id="top">
+        <div class="hero-grid">
+          <div class="hero-copy" data-reveal>
+            <div class="eyebrow"><span class="eyebrow-dot"></span>Launching soon</div>
+            <h1>For the ones who never fit in.</h1>
+            <p>Misfits bygger et mørkt, moderne klesunivers med editorial attitude, skarpe silhuetter og limited drops. Første release nærmer seg.</p>
+            <div class="hero-meta" aria-label="Høydepunkter">
+              <span class="meta-chip">Streetwear / Elevated basics</span>
+              <span class="meta-chip">Limited first drop</span>
+              <span class="meta-chip">Early access list</span>
+            </div>
+          </div>
+
+          <aside class="hero-card" id="notify" data-reveal>
+            <div class="stack">
+              <div class="brand-mark" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 44L24 18L32 32L40 18L54 44" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M18 44H46" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="launch-date">
+                <span class="label">Drop status</span>
+                <strong>Season 01 incoming</strong>
+              </div>
+            </div>
+
+            <div class="stat-grid" aria-label="Merkeøyeblikk">
+              <div class="stat"><strong>01</strong><span>First collection</span></div>
+              <div class="stat"><strong>24/7</strong><span>On the radar</span></div>
+              <div class="stat"><strong>Low qty</strong><span>Exclusive drop</span></div>
+            </div>
+
+            <form class="newsletter" id="signup-form">
+              <label class="label" for="email">Få beskjed når vi går live</label>
+              <div class="input-row">
+                <input id="email" name="email" type="email" placeholder="din@epost.no" autocomplete="email" required />
+                <button class="cta" type="submit">Notify me</button>
+              </div>
+              <p class="fineprint">Kun lanseringsnyheter, early access og første drop. Ingen spam.</p>
+              <p class="success-note" id="success-note" aria-live="polite">Du er på listen. Misfits sender signal når droppet er klart.</p>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <section class="info-strip" aria-label="Merkeinformasjonsstripe">
+        <div class="marquee">
+          <span>Misfits</span><span>Launching Soon</span><span>Limited Drop</span><span>Built for outsiders</span><span>Misfits</span><span>Launching Soon</span><span>Limited Drop</span><span>Built for outsiders</span>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-grid">
+          <div data-reveal>
+            <p class="section-kicker">Brand direction</p>
+            <h2>Raw edge. Clean silhouette.</h2>
+            <p class="section-intro">Uttrykket er enkelt, men ikke trygt. Misfits balanserer monokrome toner, sterke detaljer og en launch-først identitet som føles eksklusiv før første plagg er ute.</p>
+          </div>
+          <div class="feature-layout" data-reveal>
+            <article class="feature-card">
+              <span class="tag">Coming soon</span>
+              <h3>Engineered for the first impression.</h3>
+              <p>En hero-opplevelse med mørk editorial stemning, tydelig launch-fokus og nok attitude til at merket føles levende før nettbutikken åpner.</p>
+            </article>
+            <div class="side-stack">
+              <article class="quote-card">
+                <h3>Brand note</h3>
+                <blockquote>“Not made to blend in. Made for the ones who move differently.”</blockquote>
+                <footer>Misfits manifesto</footer>
+              </article>
+              <article class="details-card">
+                <h3>What's next</h3>
+                <p>Lanseringssiden kan enkelt bygges videre med lookbook, produktgrid, countdown til drop og integrasjon mot nyhetsbrev eller Shopify.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div data-reveal>
+          <p class="section-kicker">Countdown</p>
+          <h2>Almost on the street.</h2>
+          <p class="section-intro">Nedtellingen er satt til en demo-lansering 30 dager frem i tid. Den kan endres til eksakt dato når dere bestemmer drop-dagen.</p>
+          <div class="countdown" aria-label="Nedtelling til lansering">
+            <div class="countdown-tile"><strong id="days">30</strong><span>Dager</span></div>
+            <div class="countdown-tile"><strong id="hours">00</strong><span>Timer</span></div>
+            <div class="countdown-tile"><strong id="minutes">00</strong><span>Minutter</span></div>
+            <div class="countdown-tile"><strong id="seconds">00</strong><span>Sekunder</span></div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="container">
+        <div class="footer-card" data-reveal>
+          <div>
+            <span class="label">Misfits / 2026</span>
+            <p>Designet som en moderne JavaScript-basert landing page med coming soon-vibe og klar for videre utvikling.</p>
+          </div>
+          <a class="mini-pill" href="#top">Back to top</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    (() => {
+      const root = document.documentElement;
+      const toggle = document.querySelector('[data-theme-toggle]');
+      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+      const updateToggleIcon = () => {
+        toggle.innerHTML = theme === 'dark'
+          ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+          : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+        toggle.setAttribute('aria-label', theme === 'dark' ? 'Bytt til lyst tema' : 'Bytt til mørkt tema');
+      };
+
+      root.setAttribute('data-theme', theme);
+      updateToggleIcon();
+
+      toggle.addEventListener('click', () => {
+        theme = theme === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', theme);
+        updateToggleIcon();
+      });
+
+      const revealItems = document.querySelectorAll('[data-reveal]');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.18 });
+      revealItems.forEach(item => observer.observe(item));
+
+      const form = document.getElementById('signup-form');
+      const note = document.getElementById('success-note');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const email = new FormData(form).get('email');
+        if (!email) return;
+        note.classList.add('is-visible');
+        form.reset();
+      });
+
+      const launchDate = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+
+      const updateCountdown = () => {
+        const diff = launchDate - new Date();
+        if (diff <= 0) {
+          daysEl.textContent = '00';
+          hoursEl.textContent = '00';
+          minutesEl.textContent = '00';
+          secondsEl.textContent = '00';
+          return;
+        }
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        daysEl.textContent = String(days).padStart(2, '0');
+        hoursEl.textContent = String(hours).padStart(2, '0');
+        minutesEl.textContent = String(minutes).padStart(2, '0');
+        secondsEl.textContent = String(seconds).padStart(2, '0');
+      };
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    })();
+  </script>
+</body>
+</html>
